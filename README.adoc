@@ -1,0 +1,18 @@
+see https://stackoverflow.com/questions/56283254/overwrite-repository-definition-in-gradle-subproject/56326085
+
+a `./gradlew tasks` fails with the message that the script plugin has a dependency that can't be resolved:
+
+```
+A problem occurred evaluating project ':subproject'.
+> Could not resolve all artifacts for configuration 'classpath'.
+   > Could not find org.asciidoctor:asciidoctor-gradle-plugin:1.5.3.
+     Searched in the following locations:
+       - https://example.com/m2/org/asciidoctor/asciidoctor-gradle-plugin/1.5.3/asciidoctor-gradle-plugin-1.5.3.pom
+       - https://example.com/m2/org/asciidoctor/asciidoctor-gradle-plugin/1.5.3/asciidoctor-gradle-plugin-1.5.3.jar
+     Required by:
+         unspecified:unspecified:unspecified
+```
+
+Imagine for the oment that `example.com` is a repository behind your firewall - unreachable.
+
+Do you manage to point this pedendency to another repository without changing the subproject? Only the main project?
