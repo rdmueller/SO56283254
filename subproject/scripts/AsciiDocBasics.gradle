@@ -1,0 +1,14 @@
+/*
+ * This build file is part of the docToolchain
+ */
+buildscript {
+    repositories {
+        maven {
+            url 'https://example.com/m2/'
+        }
+    }
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
+    }
+}
+
